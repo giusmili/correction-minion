@@ -1,0 +1,119 @@
+/* base css */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+html{
+	background: url(../image/printemps.png)no-repeat fixed center center  / cover; 
+}
+body{
+	font: 16px "Roboto",sans-serif;
+	margin:0;
+}
+h1,
+h2,
+h3,
+h4,p{
+	font-weight: 300;
+	margin:0;
+}
+p{
+	line-height: 22px;
+}
+figure,ul{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style-type:none;
+}
+a{
+	text-decoration:none;/*text-decoration:underline*/
+	color:#222;
+}
+/*thème de la page*/
+header,nav{
+	background:  #2196f3;
+	line-height: 60px;
+}
+header *{/* premier élément par défaut */
+	text-align: center;
+	color: #fff;
+}
+nav{
+	background: #e3f2fd;
+	
+}
+nav ul li{
+	display:inline-block;/*déjouer un block*/
+	width: 190px;
+	text-align: center;
+	transition-duration: 0.8s;
+}
+nav ul{
+	text-align: center;
+}
+ul li a{
+	display:block;
+	transition-duration: 0.5s;
+}
+li a::before{
+	content:"\2764";
+	color:#2196f3;
+	margin-right:5px;
+}
+/*pseudo class*/
+ul li:hover{/*permet de changer la propriété de l'élément au survol*/
+	background: #bbdefb;
+}
+ul li:hover a{/* changer la propriété de a */
+	color:#fafafa;
+}
+main{
+	width: 800px;
+	margin:10px auto;
+	/* border:solid 1px #ccc; */
+}
+section h2{
+	background: #2196f3;
+	line-height: 60px;
+	color:#fafafa;
+	padding-left:10px;
+}
+section p{
+	padding:10px;
+	background: #e8eaf6;
+}
+section figure img{
+	display:inline-block;
+	border:solid 8px transparent;
+	border-left-color: #2196f3;
+	border-top-color: #bbdefb;
+	border-bottom-color: #1565c0;
+	margin:10px 0;
+	border-radius:50%;
+	transition-duration:0.5s;
+	transform:rotate(0deg);
+}
+section figure:hover img{/*rotation*/
+	transform:rotate(360deg);
+}
+figure{
+	text-align: center;
+}
+figure figcaption{
+	 /* display:none ; */
+		height:0;
+	 /* visibility:hidden; */
+ 		opacity:0; 
+	 transition-duration:0.5s;
+
+}
+figure:hover figcaption{
+	/* display:block; */
+	height:initial;/*initialiser les propriété par défaut*/
+	 opacity:1; 
+	/* visibility:visible;  */
+}
+
+/*footer*/
+footer h4{
+	text-align: center;
+}
